@@ -14,6 +14,7 @@ public class Program {
 
 	public static void main(String[] args) throws IOException {
 		
+		
 		CopyFile cf = new CopyFile();
 		
 		String origem = "c:\\Aula_189";
@@ -40,12 +41,12 @@ public class Program {
 			
 			sourceChannel.transferTo(0, sourceChannel.size(), targetChannel);
 			
+				System.out.println(fl.getName() + " ... Copiado com Sucesso!");
+			
 		}
 		
-		sourceChannel = new FileInputStream(sourceFile).getChannel();
-		targetChannel = new FileOutputStream(targetFile).getChannel();
-		
-		sourceChannel.transferTo(0, sourceChannel.size(), targetChannel);
+		System.out.println();
+		System.out.println(arquivx.length + " arquivos copiados!");
 	}
 	
 }
